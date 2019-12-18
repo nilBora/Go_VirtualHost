@@ -1,0 +1,17 @@
+server {
+        listen {{.Nginx.Port}};
+        server_name {{.Default.SiteName}};
+
+        location / {
+                ssi on;
+                default_type    text/html;
+                charset utf-8;
+                proxy_pass {{.Nginx.ProxyPass}};
+                proxy_set_header   Host             $host;
+                proxy_set_header        X-Real-IP   $remote_addr;
+                proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                limit_except GET POST {
+                        deny all;
+                }
+        }
+}

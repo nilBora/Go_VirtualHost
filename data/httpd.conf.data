@@ -1,0 +1,12 @@
+<VirtualHost {{.Httpd.Host}}:{{.Httpd.Port}}>
+    ServerAdmin {{.Httpd.Email}}
+    DocumentRoot {{.Default.SitePath}}{{.Default.SiteName}}
+    ServerName  {{.Default.SiteName}}
+    ServerAlias www.{{.Default.SiteName}}
+    #ErrorLog {{.Httpd.LogPath}}{{.Default.SiteName}}-error_log
+    #CustomLog{{.Httpd.LogPath}}{{.Default.SiteName}}-access_log common
+    <Directory {{.Default.SitePath}}>
+        AllowOverride All
+        Options All
+    </Directory>
+</VirtualHost>
