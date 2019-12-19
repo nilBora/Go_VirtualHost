@@ -5,10 +5,6 @@ import (
     "os"
     "gopkg.in/ini.v1"
     "io/ioutil"
-    //"regexp"
-    //"reflect"
-    //"strings"
-    //"encoding/json"
     "text/template"
     "os/exec"
     "./utils"
@@ -67,14 +63,9 @@ func main() {
     doCreateHosts(options)
     doCreateSite(options)
 
-    //fmt.Println(<-ch)
-
-
 //     var input string
 //     fmt.Scanln(&input)
 //     fmt.Println("Done")
-    //fmt.Println(options.Httpd.Port);
-
 }
 
 func doCreateHosts(options *Config) {
