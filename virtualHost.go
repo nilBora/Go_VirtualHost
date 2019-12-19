@@ -51,18 +51,6 @@ type Config struct {
 var ch chan string = make(chan string)
 
 func main() {
-
-
-//     out, err := exec.Command("whoami").Output()
-//     if err != nil {
-//         utils.Error("Command Whoami Failed")
-//         return
-//     }
-//     fmt.Println(string(out))
-//     fmt.Println(os.Getuid())
-//     fmt.Println(os.Getgid())
-//     return
-
     arguments := _getArguments()
 
     if len(arguments) < 1 {

@@ -1,6 +1,6 @@
 [DEFAULT]
 site_name = test.site.com
-site_path = /Users/nil/Sites/
+site_path = /path/to/site/
 add_hosts = False
 create_test_folder = True
 is_create_nginx = False
@@ -28,6 +28,6 @@ hosts_ip = 127.0.0.1
 template_page_path = data/index.html.data
 httpd_template_name = httpd.conf.data
 nginx_template_name = nginx.conf.data
-owner_user_name = nil
+owner_user_name = userName
 
 
