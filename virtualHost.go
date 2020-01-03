@@ -47,13 +47,13 @@ type Config struct {
 var ch chan string = make(chan string)
 
 func main() {
-    arguments := _getArguments()
+    arguments := getArguments()
 
     if len(arguments) < 1 {
         return;
     }
 
-    options := get_options()
+    options := getOptions()
 
     if len(arguments[0]) > 1 {
         options.Default.SiteName = arguments[0]
@@ -201,7 +201,7 @@ func doParseTemplate(fileTemplate string, options *Config, sourceFile *os.File) 
     return ""
 }
 
-func get_options() *Config {
+func getOptions() *Config {
     cfg, err := ini.Load("config.ini")
 
     if err != nil {
@@ -216,6 +216,6 @@ func get_options() *Config {
     return config;
 }
 
-func _getArguments() []string {
+func getArguments() []string {
     return os.Args[1:]
 }
